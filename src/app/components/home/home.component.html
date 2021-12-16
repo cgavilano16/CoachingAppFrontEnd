@@ -1,0 +1,40 @@
+<div class="grid mt-5">
+  <div class="col"> </div>
+  <div class="col-fixed" style="width: 760px">
+    <p-table [columns]="cols" [value]="teams" responsiveLayout="scroll">
+      <ng-template pTemplate="header" let-columns>
+          <tr>
+              <th *ngFor="let col of columns">
+                  {{col.header}}
+              </th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr *ngIf="rowData">
+            <td *ngFor="let col of columns">
+              <div *ngIf="col.subfield;then nested_object_content else normal_content"></div>
+                <ng-template #nested_object_content>
+                  <div *ngIf="col.field">
+                    <a [routerLink]="'coach/'+rowData[col.field].id" *ngIf="rowData[col.field] && col.field === 'coach' && col.subfield === 'name'">
+                      {{rowData[col.field][col.subfield]}}
+                    </a>
+                  </div>
+                </ng-template>
+                <ng-template #normal_content>
+                  <div *ngIf="col.field === 'id' ;then anchored_element else normal_element"></div>
+                  <ng-template #anchored_element>
+                    <a [routerLink]="'team/'+rowData[col.field]" >
+                      {{rowData[col.field]}}
+                    </a>
+                  </ng-template>
+                  <ng-template #normal_element>
+                    {{rowData[col.field]}}
+                  </ng-template>
+                </ng-template>
+            </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="col"> </div>
+</div>

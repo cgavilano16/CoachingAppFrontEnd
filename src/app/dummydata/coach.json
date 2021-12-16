@@ -1,0 +1,68 @@
+{
+  "id": 0,
+  "name": "Andre",
+  "age": 22,
+  "preferredSport": "Soccer",
+  "teams": [
+    {
+      "id": 0,
+      "name": "Andre's Soccer Team",
+      "sport":  "Soccer",
+      "teamCaptain": "Cesar",
+      "players" : [
+        {
+          "id": 0,
+          "name": "Jimmy",
+          "age": 18,
+          "sport": "Soccer",
+          "position": "goalie",
+          "number": 0,
+          "primaryContact": 11111111,
+          "primaryPhone": 123456789,
+          "team_id": 0
+        },
+        {
+          "id": 1,
+          "name": "Ron",
+          "age": 19,
+          "sport": "Soccer",
+          "position": "kicker",
+          "number": 1,
+          "primaryContact": 11111111,
+          "primaryPhone": 123456789,
+          "team_id": 0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Andre's Basketball Team",
+      "sport":  "Basketball",
+      "teamCaptain": "Kyle",
+      "players" : [
+        {
+          "id": 2,
+          "name": "Tim",
+          "age": 20,
+          "sport": "Basketball",
+          "position": "defense",
+          "number": 0,
+          "primaryContact": 11111111,
+          "primaryPhone": 123456789,
+          "team_id": 1
+        },
+        {
+          "id": 3,
+          "name": "Bob",
+          "age": 20,
+          "sport": "Basketball",
+          "position": "offense",
+          "number": 1,
+          "primaryContact": 11111111,
+          "primaryPhone": 123456789,
+          "team_id": 0
+        }
+      ]
+    }
+  ]
+}

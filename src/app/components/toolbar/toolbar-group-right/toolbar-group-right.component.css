@@ -1,0 +1,7 @@
+.p-speeddial-direction-down-left {
+  top: calc(50% - 2rem);
+  left: calc(50% - 2rem);
+  right: 0;
+  top: 0;
+  color: red;
+}
